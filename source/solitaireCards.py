@@ -12,4 +12,26 @@ class Ace(SolitaireCard):
 
     # i'll work on this later
     def getImageDirectory(cardNumber):
-        pass
+        return "cardGraphics/ace/" + cardNumber + ".png"
+    
+class Spade(SolitaireCard):
+    def __init__(self, cardNumber, image):
+        super().__init__(self, "Black", cardNumber, Spade.getImageDirectory(cardNumber))
+
+    def getImageDirectory(cardNumber):
+        return "cardGraphics/spade/" + cardNumber + ".png"
+
+
+class Heart(SolitaireCard):
+    def __init__(self, cardNumber, image):
+        super().__init__(self, "Red", cardNumber, Heart.getImageDirectory(cardNumber))
+
+    def getImageDirectory(cardNumber):
+        return "cardGraphics/heart/" + cardNumber + ".png"
+    
+class Diamond(SolitaireCard):
+    def __init__(self, cardNumber, image):
+        super().__init__(self, "Red", cardNumber, Spade.getImageDirectory(cardNumber))
+
+    def getImageDirectory(cardNumber):
+        return "cardGraphics/diamond/" + cardNumber + ".png"
