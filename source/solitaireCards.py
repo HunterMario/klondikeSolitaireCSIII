@@ -10,7 +10,6 @@ class Ace(SolitaireCard):
     def __init__(self, cardNumber, image):
         super().__init__(self, "Black", cardNumber, Ace.getImageDirectory(cardNumber))
 
-    # i'll work on this later
     def getImageDirectory(cardNumber):
         return "images/cards/ace/" + cardNumber + ".png"
     

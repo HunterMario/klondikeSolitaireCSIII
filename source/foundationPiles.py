@@ -6,15 +6,15 @@ class FoundationPile:
         self.type = cardType
         self.__cardStack = []
     
-    def __addToStack(self, card):
-        if ((isinstance(card, self.cardType) and 
-        card.cardNumber == self.cardStack[-1].cardNumber) or
-        (self.__cardStack.len() == 0 and card.cardNumber == 1)):
+    def addToStack(self, card):
+        if (isinstance(card, self.cardType) and 
+        ((card.cardNumber - 1 == self.cardStack[-1].cardNumber) or
+        (self.__cardStack.len() == 0 and card.cardNumber == 1))):
             self.__cardStack.append(card)
         else:
             return None
     
-    def __removeFromStack(self):
+    def removeFromStack(self):
         return self.__cardStack.pop()
 
 
